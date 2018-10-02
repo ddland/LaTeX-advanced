@@ -3,7 +3,7 @@
 \usepackage{blindtext}
 
 \usepackage{own} % eigen package voor laden standaard packages en eventuele eigen code
-
+\usepackage{circuitikz}
 \begin{document}
 \section{Plaatjes}
 In tabel \ref{tab:python} staat een selectie van de meetdata. De vesnelling in verschillende richtingen is uitgezet in figuur \ref{fig:python}. Daarnaast is vergelijking \ref{eq:verplichte vergelijking} weergegeven. 
@@ -32,6 +32,21 @@ E & energie & \sit{J} \\
 m & massa & \sit{kg} \\
 c & snelheid (van het licht) & \sit[.]{m/s} \\
 \end{grootheden}
-\end{document}
+\blindtext
+
+En nog wat electronica...
+\begin{figure}
+\centering\begin{circuitikz} \draw
+(0,0) to[battery] (0,4)
+  to[ammeter] (4,4) -- (4,0)
+  to[lamp] (0,0)
+(0.5,0) -- (0.5,-2)
+  to[voltmeter] (3.5,-2) -- (3.5,0)
+;
+\end{circuitikz}
+	\caption{Electrisch schema...}
+\end{figure}
 
 \blindtext
+\end{document}
+
