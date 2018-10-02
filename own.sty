@@ -1,0 +1,29 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{own}[2018/10/02 (Eigen packages)]
+
+% taal
+\RequirePackage[dutch]{babel}
+
+\RequirePackage[output-decimal-marker={,}, exponent-product=\cdot, separate-uncertainty=true]{siunitx}
+\RequirePackage{tikz}
+\RequirePackage{tabularx}
+\RequirePackage[small, bf]{caption}
+
+\ProcessOptions\relax
+
+%% commando's
+% si unit commando, met standaard ronde haken er omheen
+\newcommand{\sit}[2][]{(\si{#2})#1}
+\newcolumntype{M}{>{{\hskip 0.5cm}$} l <{$}}
+
+% tabel waarin grootheden geplaatst worden. Woord 'waarin' en uitlijning gaat goed. 
+\newenvironment{grootheden}
+{waarin: \vspace{0.1cm} \\
+\begin{tabular}{M l l}
+	}
+	{
+\end{tabular} \\
+\vspace{0.1cm}\newline
+}
+
+

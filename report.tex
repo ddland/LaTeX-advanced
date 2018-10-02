@@ -1,0 +1,37 @@
+\documentclass{article}
+
+\usepackage{blindtext}
+
+\usepackage{own} % eigen package voor laden standaard packages en eventuele eigen code
+
+\begin{document}
+\section{Plaatjes}
+In tabel \ref{tab:python} staat een selectie van de meetdata. De vesnelling in verschillende richtingen is uitgezet in figuur \ref{fig:python}. Daarnaast is vergelijking \ref{eq:verplichte vergelijking} weergegeven. 
+
+\blindtext
+
+\begin{figure}[htbp]
+	\centering\input{pythonfigure.pgf}
+	\caption{Voorbeeld Python figuur waarbij het font door \LaTeX gezet is.}\label{fig:python}
+\end{figure}
+
+\blindtext
+
+\begin{table}[htbp]
+	\centering\input{pythontable.tex}
+	\caption{Voorbeeld tabel met data uit een Python-script.}\label{tab:python}
+\end{table}
+
+\blindtext
+
+\begin{equation}
+E = mc^2 \label{eq:verplichte vergelijking}
+\end{equation} 
+\begin{grootheden}
+E & energie & \sit{J} \\
+m & massa & \sit{kg} \\
+c & snelheid (van het licht) & \sit[.]{m/s} \\
+\end{grootheden}
+\end{document}
+
+\blindtext
