@@ -3,11 +3,31 @@
 \usepackage{blindtext}
 
 \usepackage{own} % eigen package voor laden standaard packages en eventuele eigen code
+
 \usepackage{circuitikz}
+
+\usepackage{natbib}
+\usepackage{url}
+
 \begin{document}
 \section{Plaatjes}
-In tabel \ref{tab:python} staat een selectie van de meetdata. De vesnelling in verschillende richtingen is uitgezet in figuur \ref{fig:python}. Daarnaast is vergelijking \ref{eq:verplichte vergelijking} weergegeven. 
+In tabel \ref{tab:python} staat een selectie van de meetdata. De vesnelling in verschillende richtingen is uitgezet in figuur \ref{fig:python}. Daarnaast is vergelijking \ref{eq:verplichte vergelijking} weergegeven. Dit voorbeeld document komt van \citet{land_latex_2018}.
 
+\section{Bronnen en Bibtex}
+Voor het makkelijk omzetten van boeken/websites naar Bibtex zijn de volgende websites beschikbaar:
+\begin{itemize}
+	\item \url{https://zbib.org/}
+	\item \url{https://manas.tungare.name/software/isbn-to-bibtex}
+	\item \url{https://www.zotero.org/}
+\end{itemize}
+Andere handige websites zijn:
+\begin{itemize}
+	\item \url{http://detexify.kirelabs.org/classify.html}
+	\item \url{https://www.overleaf.com/learn/latex/Main_Page}
+	\item \url{https://tex.stackexchange.com/}
+\end{itemize}
+
+\section{Begin voorbeeld document}
 \blindtext
 
 \begin{figure}[htbp]
@@ -48,5 +68,9 @@ En nog wat electronica...
 \end{figure}
 
 \blindtext
+
+\bibliographystyle{apalike}
+\bibliography{citations}
+
 \end{document}
 
